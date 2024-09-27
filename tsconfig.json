@@ -17,5 +17,7 @@
     "jsx": "react-jsx",
   },
   "include": ["src"],
-  "exclude": ["./src/testUtils"]
+  "exclude": ["./src/testUtils"],
+  //it will not work locally, only in nx-monorepo
+  "extends": ["../../tsconfig.base.json"]
 }
