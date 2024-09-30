@@ -15,9 +15,14 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
+    "rootDir": "src",
   },
   "include": ["src"],
   "exclude": ["./src/testUtils"],
-  //it will not work locally, only in nx-monorepo
-  "extends": ["../../tsconfig.base.json"]
+  "extends": ["../../tsconfig.base.json"],
+  "references": [
+    {
+      "path": "../../libs/shared-ui"
+    }
+  ]
 }

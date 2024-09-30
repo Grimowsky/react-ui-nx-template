@@ -2,9 +2,16 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
+import * as path from 'path'
 
 export default defineConfig({
     plugins: [react(), svgr()],
+    resolve: {
+        alias: {
+            '@shared-ui': path.resolve(__dirname, '../../libs/shared-ui/src'),
+            '@': path.resolve(__dirname, '../../libs/shared-ui/src')
+        },
+    },
     server: {
         host: true,
         port: 3000,
